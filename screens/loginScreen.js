@@ -5,8 +5,9 @@ import React from "react";
 
 const loginScreen = ({onLogin}) => {
     return (
+
         <View style={styles.container}>
-            <Text>This is the login screen</Text>
+            <Text style={styles.headline}>Login</Text>
             <View>
                 <Text style={styles.inputTitle}>Username</Text>
                 <TextInput style={styles.input}></TextInput>
@@ -19,6 +20,7 @@ const loginScreen = ({onLogin}) => {
 
 
         </View>
+
     );
 }
 
@@ -40,5 +42,13 @@ const styles = StyleSheet.create({
     },
     inputTitle:{
         textAlign:"center"
+    },
+    headline:{
+        fontSize: 40,
+    },
+    buttonText:{
+        marginTop: 10,
+        textAlign:"center",
+        borderWidth:1
     }
 });

@@ -8,6 +8,7 @@ import Header from "./components/Headers";
 import Homescreen from "./screens/homescreen";
 import Watch from "./screens/watch";
 import BackButton from "./components/backButton";
+import AboutPage from "./screens/aboutPage";
 
 export default function App() {
     const [screen, setScreen] = useState(ScreenType.home)
@@ -20,8 +21,9 @@ export default function App() {
         content = <Upload />
     } else if (screen === ScreenType.watch){
         content = <Watch />
-    }
-    else if (screen === ScreenType.home){
+    } else if(screen === ScreenType.about){
+        content = <AboutPage />
+    } else if (screen === ScreenType.home){
         content = <Homescreen onExit={(data) => {
             setScreen(data)
         }

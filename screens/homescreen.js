@@ -8,7 +8,6 @@ const homescreen = ({onExit}) => {
 
     return (
         <View style={styles.container}>
-            <Text>This is the homescreen</Text>
             <View style={styles.innerContainer}>
                 <Pressable onPress={()=>onExit(ScreenType.login)}>
                     <Text style={styles.buttonText}>Login</Text>
@@ -18,6 +17,13 @@ const homescreen = ({onExit}) => {
             <View style={styles.innerContainer}>
                 <Pressable onPress={()=>onExit(ScreenType.watch)}>
                     <Text style={styles.buttonText}>Latest News</Text>
+                </Pressable>
+
+            </View>
+
+            <View style={styles.innerContainer}>
+                <Pressable onPress={()=>onExit(ScreenType.about)}>
+                    <Text style={styles.buttonText}>About (Dont work rn)</Text>
                 </Pressable>
 
             </View>
@@ -35,11 +41,16 @@ const styles = StyleSheet.create({
 
     },
     innerContainer: {
-        backgroundColor:'#ddd',
-        width: '80%',
+        backgroundColor:'#000000',
+        width: '50%',
         height: '20%',
+        textAlign: "center",
+        justifyContent: "space-around",
+
+
     },
     buttonText:{
         textAlign:"center",
+        color: '#f8f8ff'
     }
 });
