@@ -12,13 +12,14 @@ import AboutPage from "./screens/aboutPage";
 
 export default function App() {
     const [screen, setScreen] = useState(ScreenType.home)
+    const [notes, setNotes] = useState([])
     let content;
 
     if (screen === ScreenType.login){
         content = <LoginScreen onLogin={(data) => {
             setScreen(data)}}/>
     } else if (screen === ScreenType.upload){
-        content = <Upload />
+        content = <Upload onUpload={(data)=>setNotes([...notes,{id:Date.now(),note: data }])}/>
     } else if (screen === ScreenType.watch){
         content = <Watch />
     } else if(screen === ScreenType.about){
