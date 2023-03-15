@@ -23,7 +23,7 @@ const homescreen = ({onExit}) => {
 
             <View style={styles.innerContainer}>
                 <Pressable onPress={()=>onExit(ScreenType.about)}>
-                    <Text style={styles.buttonText}>About (Dont work rn)</Text>
+                    <Text style={styles.buttonText}>About</Text>
                 </Pressable>
 
             </View>

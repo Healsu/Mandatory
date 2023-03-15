@@ -50,7 +50,7 @@ const renderItem = (itemData) =>{
 
     return (
         <View style={styles.buttons}>
-            <Text>Diffrent News</Text>
+            <Text style={styles.headline}>Diffrent News</Text>
             <Button title="Gaming" onPress={getGaming}/>
             <Button title="ForFun" onPress={getForFun}/>
             <Button title="News" onPress={getNews}/>
@@ -74,5 +74,9 @@ const styles = StyleSheet.create({
     },
     buttons:{
 
+    },
+    headline:{
+        fontSize: 40,
+        textAlign:"center",
     }
 });
